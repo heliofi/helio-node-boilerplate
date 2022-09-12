@@ -1,0 +1,87 @@
+{
+  "name": "@epicurus/root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Epicurus apps",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "jest --selectProjects unit --testTimeout=20000",
+    "build:api": "yarn workspace @heliofi/api build",
+    "start:api": "nodemon packages/api/dist/main.js",
+    "build": "tsc --build --verbose packages/*",
+    "lint": "eslint \"**/src/**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "prettier": "prettier -c \"**/src/**/*.ts\"",
+    "prettier:fix": "prettier -w ."
+  },
+  "devDependencies": {
+    "@heliofi/eslint-config-helio": "^0.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  },
+  "jest": {
+    "projects": [{
+      "displayName": "unit",
+      "testTimeout": 20000,
+      "collectCoverageFrom": [
+        "**/*.(t|j)s"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "json",
+        "ts"
+      ],
+      "testRegex": "(api|common)/.*\\.(spec|test)\\.ts$",
+      "transform": {
+        "^.+\\.ts$": "ts-jest"
+      },
+      "coverageDirectory": "../coverage",
+      "testEnvironment": "node"
+    }]
+  },
+  "eslintConfig": {
+    "root": true,
+    "plugins": [
+      "prettier",
+      "jest"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "@typescript-eslint/interface-name-prefix": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/explicit-function-return-type": ["warn"],
+      "@typescript-eslint/no-explicit-any": ["warn"],
+      "no-underscore-dangle": "off"
+    },
+    "extends": [
+      "@heliofi/eslint-config-helio",
+      "prettier",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "ignorePatterns": [
+      "**/dist"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "license": "ISC"
+}

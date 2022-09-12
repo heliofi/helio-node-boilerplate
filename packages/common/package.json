@@ -1,0 +1,16 @@
+{
+  "name": "@heliofi/common",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Common package",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"todo\""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "class-validator": "^0.13.2",
+    "moment": "^2.29.4"
+  }
+}
