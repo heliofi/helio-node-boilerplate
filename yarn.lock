@@ -345,10 +345,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@heliofi/eslint-config-helio@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@heliofi/eslint-config-helio/-/eslint-config-helio-0.1.1.tgz#2e35edc2e725b2536fcd79aa0b1141a8b0e95028"
-  integrity sha512-23VJ5uixK2OO2uugcXKVzdPwW/BjJ1elfwMZnwMF+VYGTz6dv6HeA77vMjGJ2IkV6nnCwsYC7FeuBXOIKrzPxw==
+"@heliofi/eslint-config-helio@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@heliofi/eslint-config-helio/-/eslint-config-helio-0.3.0.tgz#84a6348fcb7174ca08243700ba5601a5cdef83a0"
+  integrity sha512-p/YdxzY33UkFsiMs8QmdvQ2IRSJ2zfNLt/gZqJYiZeAJhmxMQO19/Bfg93m804eKWdHyQJabj9VMNLmy0zFRPg==
 
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"

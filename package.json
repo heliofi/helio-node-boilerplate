@@ -20,7 +20,7 @@
     "prettier:fix": "prettier -w ."
   },
   "devDependencies": {
-    "@heliofi/eslint-config-helio": "^0.1.1",
+    "@heliofi/eslint-config-helio": "^0.3.0",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "eslint": "^8.19.0",
