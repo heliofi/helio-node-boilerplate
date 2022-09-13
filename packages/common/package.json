@@ -10,7 +10,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "class-validator": "^0.13.2",
-    "moment": "^2.29.4"
+    "class-validator": "^0.13.2"
   }
 }
